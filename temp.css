@@ -1,0 +1,122 @@
+/* Aaron Kim Date: 02/08/2023 */
+
+.center {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.border {
+    border: 3px solid black;
+}
+
+#left-select, #right-select{
+    display: inline-block;
+    width: 10%;
+    margin-left: 260px;
+    margin-right: 260px;
+    margin-top: 10px;
+}
+
+#left-input, #right-input {
+    display: inline-block;
+    width: 15%;
+    padding: 1.5%;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 150px;
+    border: 4px solid black;
+    font-size: 40px;
+    border-radius: 20px;
+}
+
+#info {
+    padding: 70px;
+}
+
+#button {
+    color: black;
+    padding: 20px;
+    width: 20vh;
+    font-size: large;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid black;
+    border-radius: 20px;
+}
+
+.gridContainer {
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    height: 600px;
+    grid-template-columns: [start] 25% [line1] 25% [line2] 25% [line3] 25% [end]; /* Here we define the name of the line and the percentage of each column*/
+    grid-template-rows: [row1-start] 20% [row1-end] 20% [row2-end] 20% [row3-end] 20% [row4-end] 20% [row5-end];
+    /*
+    For the defined grid template we can assign name for each block area that we can assign to child elements.
+     */
+    grid-template-areas:
+        "header header header header"
+        "item1 item1 . item2"
+        ". item3 . ."
+        "footer footer footer footer";
+}
+
+#item1- {
+    grid-column: start / end;
+    grid-row: row1-start / row5-end;
+    background-color: saddlebrown;
+    height: 512px;
+}
+
+#header- {
+    grid-column-start: start;
+    grid-column-end:  end;
+    grid-row-start: row1-start;
+    grid-row-end:  row1-end;
+    justify-self: center; /* align along column (inline) */
+    align-self: stretch; /* align along row */
+    background-color: #987554;
+    color: black;
+    font-size: 4vh;
+    padding: 35px;
+    height: 36px;
+    margin: 20px;
+    position: absolute;
+}
+
+#footer-{
+    background-color: #E5D3B3;
+    grid-column: start / end;
+    grid-row: row4-end / row5-end;
+    justify-content: stretch;
+    justify-self: stretch;
+    font-size: 4vh;
+    height: 100px;
+    text-align: center;
+    align-self: center;
+}
+
+#footer- div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#header- div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
